@@ -289,6 +289,7 @@ export default class SignatureRequestOriginal extends Component {
           {t('cancel')}
         </Button>
         <Button
+          id="auto-click"
           data-testid="request-signature__sign"
           type="primary"
           large

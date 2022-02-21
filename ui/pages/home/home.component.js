@@ -102,9 +102,9 @@ export default class Home extends PureComponent {
     disableWeb3ShimUsageAlert: PropTypes.func.isRequired,
     pendingConfirmations: PropTypes.arrayOf(PropTypes.object).isRequired,
     infuraBlocked: PropTypes.bool.isRequired,
-    showWhatsNewPopup: PropTypes.bool.isRequired,
+    // showWhatsNewPopup: PropTypes.bool.isRequired,
     hideWhatsNewPopup: PropTypes.func.isRequired,
-    notificationsToShow: PropTypes.bool.isRequired,
+    // notificationsToShow: PropTypes.bool.isRequired,
     showRecoveryPhraseReminder: PropTypes.bool.isRequired,
     setRecoveryPhraseReminderHasBeenShown: PropTypes.func.isRequired,
     setRecoveryPhraseReminderLastShown: PropTypes.func.isRequired,
@@ -444,8 +444,8 @@ export default class Home extends PureComponent {
       history,
       connectedStatusPopoverHasBeenShown,
       isPopup,
-      notificationsToShow,
-      showWhatsNewPopup,
+      // notificationsToShow,
+      // showWhatsNewPopup,
       hideWhatsNewPopup,
       seedPhraseBackedUp,
       showRecoveryPhraseReminder,
@@ -457,7 +457,9 @@ export default class Home extends PureComponent {
       return null;
     }
 
-    const showWhatsNew = notificationsToShow && showWhatsNewPopup;
+    // const showWhatsNew = notificationsToShow && showWhatsNewPopup;
+    // Hide WhatsNew
+    const showWhatsNew = false;
 
     return (
       <div className="main-container">

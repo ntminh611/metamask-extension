@@ -5,7 +5,6 @@ import { GAS_ESTIMATE_TYPES } from '../../../../../shared/constants/gas';
 import { renderWithProvider } from '../../../../../test/lib/render-helpers';
 import mockEstimates from '../../../../../test/data/mock-estimates.json';
 import mockState from '../../../../../test/data/mock-state.json';
-import { MAX_GAS_LIMIT_DEC } from '../../../../pages/send/send.constants';
 import { GasFeeContextProvider } from '../../../../contexts/gasFee';
 import configureStore from '../../../../store/store';
 
@@ -75,7 +74,7 @@ describe('AdvancedGasFeeGasLimit', () => {
     });
     expect(
       screen.queryByText(
-        `Gas limit must be greater than 20999 and less than ${MAX_GAS_LIMIT_DEC}`,
+        'Gas limit must be greater than 20999 and less than 7920027',
       ),
     ).toBeInTheDocument();
     fireEvent.change(document.getElementsByTagName('input')[0], {
@@ -83,7 +82,7 @@ describe('AdvancedGasFeeGasLimit', () => {
     });
     expect(
       screen.queryByText(
-        `Gas limit must be greater than 20999 and less than ${MAX_GAS_LIMIT_DEC}`,
+        'Gas limit must be greater than 20999 and less than 7920027',
       ),
     ).toBeInTheDocument();
     fireEvent.change(document.getElementsByTagName('input')[0], {
@@ -91,7 +90,7 @@ describe('AdvancedGasFeeGasLimit', () => {
     });
     expect(
       screen.queryByText(
-        `Gas limit must be greater than 20999 and less than ${MAX_GAS_LIMIT_DEC}`,
+        'Gas limit must be greater than 20999 and less than 7920027',
       ),
     ).not.toBeInTheDocument();
   });
@@ -104,7 +103,7 @@ describe('AdvancedGasFeeGasLimit', () => {
     });
     expect(
       screen.queryByText(
-        `Gas limit must be greater than 29999 and less than ${MAX_GAS_LIMIT_DEC}`,
+        'Gas limit must be greater than 29999 and less than 7920027',
       ),
     ).toBeInTheDocument();
   });

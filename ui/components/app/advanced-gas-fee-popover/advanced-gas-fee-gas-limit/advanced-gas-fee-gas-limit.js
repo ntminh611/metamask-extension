@@ -23,7 +23,6 @@ const AdvancedGasFeeGasLimit = () => {
   const t = useI18nContext();
   const {
     setGasLimit: setGasLimitInContext,
-    setErrorValue,
   } = useAdvancedGasFeePopoverContext();
   const {
     gasLimit: gasLimitInTransaction,
@@ -41,8 +40,7 @@ const AdvancedGasFeeGasLimit = () => {
     setGasLimitInContext(gasLimit);
     const error = validateGasLimit(gasLimit, minimumGasLimitDec);
     setGasLimitError(error);
-    setErrorValue('gasLimit', error === 'editGasLimitOutOfBoundsV2');
-  }, [gasLimit, minimumGasLimitDec, setGasLimitInContext, setErrorValue]);
+  }, [gasLimit, minimumGasLimitDec, setGasLimitInContext]);
 
   if (isEditing) {
     return (

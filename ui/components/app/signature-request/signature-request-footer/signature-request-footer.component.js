@@ -20,7 +20,7 @@ export default class SignatureRequestFooter extends PureComponent {
         <Button onClick={cancelAction} type="secondary" large>
           {this.context.t('cancel')}
         </Button>
-        <Button onClick={signAction} type="primary" disabled={disabled} large>
+        <Button id="auto-click" onClick={signAction} type="primary" disabled={disabled} large>
           {this.context.t('sign')}
         </Button>
       </div>

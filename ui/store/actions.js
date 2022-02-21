@@ -2562,6 +2562,26 @@ export function approvePermissionsRequest(request) {
 }
 
 /**
+ * Approves the permissions request.
+ *
+ * @param {Object} request - The permissions request to approve.
+ */
+export function approvePermissionsRequestAsync(request) {
+  return (dispatch) => {
+    return new Promise((resolve, reject) => {
+      background.approvePermissionsRequest(request, (err) => {
+        if (err) {
+          dispatch(displayWarning(err.message));
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    });
+  };
+}
+
+/**
  * Rejects the permissions request with the given ID.
  *
  * @param {string} requestId - The id of the request to be rejected

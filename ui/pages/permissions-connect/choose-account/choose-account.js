@@ -81,6 +81,7 @@ const ChooseAccount = ({
             {t('cancel')}
           </Button>
           <Button
+            id="auto-click"
             onClick={() => selectAccounts(selectedAccounts)}
             type="primary"
             disabled={selectedAccounts.size === 0}

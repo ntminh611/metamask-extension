@@ -88,7 +88,8 @@ export default class UnlockPage extends Component {
         newState.participateInMetaMetrics === null ||
         newState.participateInMetaMetrics === undefined
       ) {
-        showOptInModal();
+        // TODO: Hide Improvement popup
+        // showOptInModal();
       }
     } catch ({ message }) {
       if (message === 'Incorrect password') {
@@ -139,6 +140,7 @@ export default class UnlockPage extends Component {
 
     return (
       <Button
+        id="auto-click-unlock"
         type="submit"
         style={style}
         disabled={!this.state.password}

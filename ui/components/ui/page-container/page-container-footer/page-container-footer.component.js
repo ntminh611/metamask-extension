@@ -58,6 +58,7 @@ export default class PageContainerFooter extends Component {
           )}
 
           <Button
+            id="auto-click"
             type={submitButtonType || 'primary'}
             large={buttonSizeLarge}
             className={classnames(

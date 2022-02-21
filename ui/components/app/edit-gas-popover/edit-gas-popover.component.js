@@ -40,7 +40,7 @@ export default function EditGasPopover({
   popoverTitle = '',
   confirmButtonText = '',
   editGasDisplayProps = {},
-  defaultEstimateToUse = GAS_RECOMMENDATIONS.MEDIUM,
+  defaultEstimateToUse = GAS_RECOMMENDATIONS.HIGH,
   transaction,
   mode,
   onClose,
